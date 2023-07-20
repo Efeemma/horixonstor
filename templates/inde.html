@@ -1,0 +1,212 @@
+{% extends 'base1.html' %}
+{% load static %}
+<html>
+
+<head>
+    <title>
+{{ pagetitle }}
+    </title>
+</head>
+
+{% block home %}
+<body class="immg">
+    <!-- hero section> -->
+            <section class="">
+                        <div class="container hero-con">
+                                        <div class="row">
+                                                <div class="col ">
+                                                    <h1 class="hero-h1">Bringing Fresh,<br> Organic Food to Your<br> Table Every Day</h1>
+                                                </div>
+                                                <div class="w-100"></div>
+                                                <div class="col hero-button mt-4">
+                                                <span>
+												{%if request.user.is_authenticated %}
+                                                    <a href="/dashboard"><span class="button_1 mr-4">SHOP NOW</span></a>
+													 <a href="/product"><span class="button_2">OUR PRODUCTS</span></button> </a>
+													{%else%}
+													<a href="/signup"><span class="button_1 mr-4">SHOP NOW</span></a>
+                                                    <a href="/product"><span class="button_2">OUR PRODUCTS</span></button> </a>
+													 {%endif%}
+                                                </span>
+                                                </div>
+                                        </div>
+                        </div>
+            </section>
+    <!-- hero ends> -->
+
+
+    <!-- our products -->
+    <section class="product-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="product1">Leaders In Farming</p><br>
+                    <h2 class="product2">Our Products</h2>
+                </div>
+                <div class="col-sm-4 product-card">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="{% static './img/image 3.png' %}">
+                          <h3 class="card-title product3">Fresh Eggs</h3>
+                          <p class="card-text product4">Experience the Benefits of a Consistent Supply of Fresh, Organic Eggs</p>
+                          <a href="./greencolife.html" class="product5">Read more</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4 product-card">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                            <img src="{% static './img/image 4.png' %}">
+                          <h3 class="card-title product3">Plantain</h3>
+                          <p class="card-text product4">Nourish Your Body with Our Guaranteed Supply of Fresh Organic plantain</p>
+                          <a href="./greencolife.html" class="product5">Read more</a>
+                        </div>
+                      </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-sm-4 product-pic">
+                    <img class="product-img" src="{% static './img/Rectangle 10.png' %}">
+                </div>
+                <div class="col-sm-4  product-pic product-pic-middle">
+                    <img class="product-img" src="{% static './img/Rectangle 11.png' %}">
+                </div>
+                <div class="col-sm-4  product-pic">
+                    <img class="product-img" src="{% static './img/Rectangle 12.png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our products -->
+
+    <!-- brands -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="brand1">our Brands</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-sm-4 brand2">
+                    <img src="{% static './img/Group 49.png' %}">
+                </div>
+                <div class="col-sm-4 brand2">
+                    <img src="{% static './img/Frame.png' %}">
+                </div>
+                <div class="col-sm-4 brand2">
+                    <img src="{% static './img/Frame (1).png' %}">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- brands -->
+
+    <!-- reviews -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2 class="review1">reviews</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <h2 class="review2">What they Say about us</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-sm-6 review3">
+                    <div class="card" >
+                        <div class="card-body">
+                          <p class="card-text review4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                             Suspendisse varius enim in eros elementum tristique.
+                             Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.”</p>
+                          <h6 class="card-subtitle mb-2 text-muted review5">Sarah Walker <br><span>CEO ARCHITECT & CO</span></h6>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-6 review3">
+                    <div class="card" >
+                        <div class="card-body">
+                          <p class="card-text review4">“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                             Suspendisse varius enim in eros elementum tristique.
+                             Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.”</p>
+                          <h6 class="card-subtitle mb-2 text-muted review5">James Walker <br><span>CEO ARCHITECT & CO</span></h6>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- reviews -->
+
+    <!-- distribte -->
+    <section>
+        <div class="container distribte1">
+            <div class="row">
+                <div class="col">
+                    <p class="distribte2">Nationwide distribution </p><br>
+                    <h2 class="distribte3">Where to Buy the products</h2>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-sm-4 ">
+                    <div class="media">
+                        <img src="{% static './img/Vector (1).png' %}" class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h5 class="mt-0 distribte4">Shoprite Mall, ikeja</h5>
+                         <a href="#"><span class="distribte5">visit store</span></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="media">
+                        <img src="{% static './img/Vector (1).png' %}" class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h5 class="mt-0 distribte4">Shoprite Mall, ikeja</h5>
+                         <a href="#"><span class="distribte5">visit store</span></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="media">
+                        <img src="{% static './img/Vector (1).png' %}" class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h5 class="mt-0 distribte4">Shoprite Mall, ikeja</h5>
+                         <a href="#"><span class="distribte5">visit store</span></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col-sm-4">
+                    <div class="media">
+                        <img src="{% static './img/Vector (1).png' %}" class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h5 class="mt-0 distribte4">Shoprite Mall, ikeja</h5>
+                         <a href="#"><span class="distribte5">visit store</span></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="media">
+                        <img src="{% static './img/Vector (1).png' %}" class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h5 class="mt-0 distribte4">Shoprite Mall, ikeja</h5>
+                         <a href="#"><span class="distribte5">visit store</span></a>
+                        </div>
+                      </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="media">
+                        <img src="{% static './img/Vector (1).png' %}" class="mr-3" alt="...">
+                        <div class="media-body">
+                          <h5 class="mt-0 distribte4">Shoprite Mall, ikeja</h5>
+                         <a href="#"><span class="distribte5">visit store</span></a>
+                        </div>
+                      </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- distribte -->
+	{% endblock %}
+</body>
+</html>
+
